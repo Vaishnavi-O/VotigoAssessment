@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body {
+    background-image: url(./assets/background.jpg);
+  }
+  #myForm {
+    margin: 40px auto;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    text-align: center;
+  }
+  sup {
+    color: #ad3333;
+  }
+  .form-item {
+    display: flex;
+    margin: 20px;
+  }
+  .form-item input,
+  .form-item select {
+    border: 2px solid black;
+    padding: 8px;
+    flex-grow: 1;
+  }
+  
+  .form-item label {
+    display: inline;
+    font-size: 18px;
+    font-weight: 300;
+    white-space: nowrap;
+    width: 165px;
+    margin-right: 10px;
+    text-align: right;
+  }
+  #agreement-box {
+    margin-left: 195px;
+  }
+  #agreement-box input {
+    flex-grow: 0;
+  
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+  #agreement-box label {
+    white-space: normal;
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+  }
+  div p{
+    margin-left: 250px;
+    margin-bottom: 20px;
+  }
+  #submitButton {
+    padding: 10px 30px 10px 30px;
+    border: 2px solid orangered;
+    background: orangered;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 250px;
+  }
+  
+  .error {
+    display: inline-block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }  
+  
+  .errorSpan{
+    margin-left: 195px;
+  }
+  @media (max-width: 640px) {
+    .form-item {
+      flex-direction: column;
+    }
+    .form-item label {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    #agreement-box {
+      margin-left: 20px;
+      flex-direction: row;
+    }
+    div p{
+        margin-left: 90px;
+        margin-bottom: 20px;
+      }
+      #submitButton {
+        margin-left: 90px;
+      }
+  }  

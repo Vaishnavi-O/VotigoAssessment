@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Votigo UI</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <h2>Enter for your chance to win!</h2>
+    <form id="myForm" method="post" action="#">
+      <div class="form-item">
+        <label for="firstName">First Name <sup>*</sup></label>
+        <input
+          name="firstName"
+          required
+          autofocus="true"
+          placeholder="First Name*"
+          id="firstName"
+          type="text"
+        />
+      </div>
+      <div class="errorSpan">
+        <span id="firstNameError" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="lastName">Last Name <sup>*</sup></label>
+        <input
+          name="lastName"
+          required
+          placeholder="Last Name*"
+          id="lastName"
+          type="text"
+        />
+      </div>
+      <div class="errorSpan">
+        <span id="lastNameError" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="email">Email <sup>*</sup></label>
+        <input
+          name="email"
+          required
+          placeholder="Email*"
+          id="email"
+          type="email"
+        />
+      </div>
+      <div class="errorSpan">
+        <span id="emailError" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="confirmEmail">Confirm your Email <sup>*</sup></label>
+        <input
+          name="confirmEmail"
+          required
+          placeholder="Confirm Email*"
+          id="confirmEmail"
+          type="email"
+        />
+      </div>
+      <div class="errorSpan">
+        <span id="confirmEmailError" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="address1">Address 1 <sup>*</sup></label>
+        <input
+          name="address1"
+          required
+          placeholder="Address 1*"
+          id="address1"
+          type="text"
+        />
+      </div>
+      <div class="errorSpan">
+        <span id="address1Error" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="address2">Address 2</label>
+        <input
+          name="address2"
+          placeholder="Address 2"
+          id="address2"
+          type="text"
+        />
+      </div>
+      <div class="form-item">
+        <label for="city">City <sup>*</sup></label>
+        <input name="city" required placeholder="City*" id="city" type="text" />
+      </div>
+      <div class="errorSpan">
+        <span id="cityError" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="state">State/Province <sup>*</sup></label>
+        <select name="state" id="state">
+          <option value="">Select State*</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Andaman and Nicobar Islands">
+            Andaman and Nicobar Islands
+          </option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+          <option value="Daman and Diu">Daman and Diu</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Lakshadweep">Lakshadweep</option>
+          <option value="Puducherry">Puducherry</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+        </select>
+      </div>
+      <div class="errorSpan">
+        <span id="stateError" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="zip">Zip/Postal Code <sup>*</sup></label>
+        <input
+          name="zip"
+          required
+          placeholder="Zip/Postal Code*"
+          id="zip"
+          type="text"
+        />
+      </div>
+      <div class="errorSpan">
+        <span id="zipError" class="error"></span>
+      </div>
+      <div class="form-item">
+        <label for="phone">Phone Number <sup>*</sup></label>
+        <input
+          name="phone"
+          required
+          placeholder="Phone Number*"
+          id="phone"
+          type="text"
+        />
+      </div>
+      <div class="errorSpan">
+        <span id="phoneError" class="error"></span>
+      </div>
+      <div class="form-item" id="agreement-box">
+        <input id="agreement" type="checkbox" required />
+        <label for="agreement"
+          ><sup>*</sup>I have read and agree to the
+          <a href="#">Official Rules</a> and
+          <a href="#">Privacy Policy</a></label
+        >
+      </div>
+      <div class="form-item">
+        <label for="verification">Verification <sup>*</sup></label>
+        <div
+          class="g-recaptcha"
+          data-sitekey="6Ld1OsYmAAAAAMlSrnZhT4L1lxqLYlS3RLtdHqYn"
+        ></div>
+      </div>
+      <div>
+        <p><sup>*</sup> required fields</p>
+      </div>
+      <div>
+        <input type="submit" id="submitButton" value="SUBMIT" />
+      </div>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
